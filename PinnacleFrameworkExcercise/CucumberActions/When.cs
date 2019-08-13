@@ -74,10 +74,11 @@ namespace PinnacleFrameworkExcercise.CucumberActions
             MouseMove(0, 0);
         }
 
-        internal static void UserEntersFilePath(string filePath, IWebDriver driver)
+        internal static void UserEntersFilePath(string filePath)
         {
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(1000);
             HandleUploadWindow(filePath);
+            System.Threading.Thread.Sleep(2000);
         }
 
         internal static void UserClicksOnButton(IWebElement button)

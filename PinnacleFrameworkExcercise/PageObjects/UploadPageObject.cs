@@ -19,7 +19,7 @@ namespace PinnacleFrameworkExcercise.PageObjects
         [FindsBy(How = How.Id, Using = "file-submit")]
         public IWebElement uploadButton;
 
-        [FindsBy(How = How.CssSelector, Using = "html.no-js body div.row div#content.large-12.columns div.example h3")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/h3")]
         public IWebElement successMessage;
     }
 }

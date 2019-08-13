@@ -15,10 +15,10 @@ namespace PinnacleFrameworkExcercise.Tests
             var userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\');
             string filePath = @"C:\Users\" + userName[1] + @"\Desktop\test.txt";
             page = new UploadPageObject(driver);
-            Given.GetUrl("https://ss-testing-automated-exercise.herokuapp.com/upload", driver);
+            Given.UserEntersPage("https://ss-testing-automated-exercise.herokuapp.com/upload", driver);
             Given.UserCreatesAFile(filePath);
             When.UserClicksOnButton(page.browserButton);
-            When.UserEntersFilePath(filePath, driver);
+            When.UserEntersFilePath(filePath);
             When.UserClicksOnButton(page.uploadButton);
             Assert.IsTrue(condition: Then.messageIsDisplayed("File Uploaded!", page.successMessage));
         }

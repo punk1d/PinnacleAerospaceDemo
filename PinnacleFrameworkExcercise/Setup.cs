@@ -18,8 +18,8 @@ namespace PinnacleFrameworkExcercise
             //options.AddArgument("headless");
             options.AddUserProfilePreference("disable-popup-blocking", "true");
             options.AddArgument("no-sandbox");
-            driver = new FirefoxDriver(FirefoxDriverService.CreateDefaultService());
-            //new ChromeDriver(ChromeDriverService.CreateDefaultService());
+            driver = //new FirefoxDriver(FirefoxDriverService.CreateDefaultService());
+            new ChromeDriver(ChromeDriverService.CreateDefaultService());
             driver.Manage().Window.Size = new Size(800, 600);
         }
 

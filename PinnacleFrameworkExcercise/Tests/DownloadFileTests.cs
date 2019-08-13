@@ -6,10 +6,7 @@ namespace PinnacleFrameworkExcercise.Tests
 {
     [TestClass]
     public class DownloadFileTests : Setup
-    {
-        Given given = new Given();
-        When when = new When();
-        Then then = new Then();
+    {   
         DownloadFilePageObject page;
 
         [TestMethod]

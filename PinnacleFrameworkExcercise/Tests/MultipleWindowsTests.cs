@@ -16,6 +16,9 @@ namespace PinnacleFrameworkExcercise.Tests
             Given.UserEntersPage("https://ss-testing-automated-exercise.herokuapp.com/windows", driver);
             page.link.Click();
             When.JustWaitSomeTime(driver, 2);
+            var x = driver.WindowHandles;
+            
+            page = new MultipleWindowsPageObject(driver.SwitchTo().Window(x[1]));
             var message = page.message.Text;
             Assert.IsTrue(condition: Then.messageIsDisplayed("New Window", page.message));
         }
