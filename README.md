@@ -32,3 +32,27 @@ The following steps will guide you to the most basic execution of the Test Suite
 This project contains a suite of 26 Tests that were designed for the following scenarios described:
 
   [https://docs.google.com/document/d/1K1R2mM8qduajiUNbF09s2eczs_24GMyibFjEB_4XwLo/edit#](https://docs.google.com/document/d/1K1R2mM8qduajiUNbF09s2eczs_24GMyibFjEB_4XwLo/edit#)
+  
+ # Troubleshoot
+ 
+ So far, this is the list of identified problems for some users:
+ 
+ ## Admin permissions
+ 
+ When building the application some users may experience the following Output:
+ 
+  ```bash
+   Command "chmod +x " exited with code 9009
+  ```
+  
+  This can be solved by running Visual Studio in admin mode.
+  
+  ## Run suites using the Test menu
+  
+  Unit Test projects won't run by using the "play" icon in the menu at the top of Visual Studio IDE, nor when selecting "Debuv>Start Debugging" or hitting "F5"
+  
+  Instead, tests can be run through "Test>Run" options or selecting the wanted tests and selecting "Run Selected Tests" out of the context menu.
+  
+  
+  
+  
